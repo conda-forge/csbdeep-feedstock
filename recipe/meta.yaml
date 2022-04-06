@@ -13,7 +13,7 @@ build:
   entry_points:
     - care_predict = csbdeep.scripts.care_predict:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
   run:
     - h5py >=3  # [py>=39]
     - h5py <3   # [py<39]
-    - tensorflow >=2 
+    - tensorflow >=2  # [unix]
     - matplotlib-base
     - numpy
     - python
@@ -30,6 +30,8 @@ requirements:
     - six
     - tifffile
     - tqdm
+  run_constrained:  # [win]
+    - tensorflow >=2  # [win]
 
 test:
   imports:
