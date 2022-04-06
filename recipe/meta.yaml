@@ -30,7 +30,7 @@ requirements:
     - six
     - tifffile
     - tqdm
-   run_constrained:  # [win]
+  run_constrained:  # [win]
     - tensorflow >=2  # [win]
 
 test:
