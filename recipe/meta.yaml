@@ -1,5 +1,5 @@
 {% set name = "csbdeep" %}
-{% set version = "0.6.3" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/csbdeep-{{ version }}.tar.gz
-  sha256: be886751dde0d9e68dab49f2cc149f9bb38b718d6660c31d30722adbf7601327
+  sha256: bed342793b3074f1b1a7d6930c18770dc3974e97d0cc4674a68266a068976726
 
 build:
   entry_points:
     - care_predict = csbdeep.scripts.care_predict:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -30,7 +30,7 @@ requirements:
     - six
     - tifffile
     - tqdm
-  run_constrained:  # [win]
+  run_constrained:   # [win]
     - tensorflow >=2  # [win]
 
 test:
