@@ -10,6 +10,7 @@ source:
   sha256: 26880076f1ed4546964b94c7b59b7e8cffe3d028ae0ddbdb82f039df5b8a3eb7
 
 build:
+  noarch: python
   entry_points:
     - care_predict = csbdeep.scripts.care_predict:main
   script: {{ PYTHON }} -m pip install . -vv
