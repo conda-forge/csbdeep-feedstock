@@ -14,19 +14,19 @@ build:
   entry_points:
     - care_predict = csbdeep.scripts.care_predict:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python
+    - python >= 3.6
   run:
     - h5py >=3  # [py>=39]
     - h5py <3   # [py<39]
     - tensorflow >=2  # [unix]
     - matplotlib-base
     - numpy
-    - python
+    - python >= 3.6
     - scipy
     - six
     - tifffile
