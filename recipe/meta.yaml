@@ -21,9 +21,8 @@ requirements:
     - pip
     - python >= 3.6
   run:
-    - h5py >=3  # [py>=39]
-    - h5py <3   # [py<39]
-    - tensorflow >=2  # [unix]
+    - h5py >=3
+    - tensorflow >=2.4  
     - matplotlib-base
     - numpy
     - python >= 3.6
@@ -32,8 +31,6 @@ requirements:
     - tifffile
     - tqdm
     - packaging
-  run_constrained:   # [win]
-    - tensorflow >=2  # [win]
 
 test:
   imports:
