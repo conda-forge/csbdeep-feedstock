@@ -1,5 +1,5 @@
 {% set name = "csbdeep" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/csbdeep-{{ version }}.tar.gz
-  sha256: e4874f37fd932b9cba60c9ec27e5b088d1bb7b09e36b16a158476371cbbffa5a
+  sha256: 85d6fc360bb33253ba6f543d75cf0cf123595f0ea4dd1fa76b1e5bc8fc55b901
 
 build:
   entry_points:
