@@ -1,11 +1,11 @@
-About csbdeep
-=============
+About csbdeep-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/csbdeep-feedstock/blob/main/LICENSE.txt)
 
 Home: http://csbdeep.bioimagecomputing.com/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/csbdeep-feedstock/blob/main/LICENSE.txt)
 
 Summary: CSBDeep - a toolbox for Content-aware Image Restoration (CARE)
 
