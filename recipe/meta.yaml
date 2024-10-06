@@ -1,5 +1,5 @@
 {% set name = "csbdeep" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/csbdeep-{{ version }}.tar.gz
-  sha256: 48058d5a087440c20a803988db91e93efe8c90943b62e5995443fafa1656a1c8
+  sha256: 43a9e3108a9bf9cd3cd12e87292ce84b2476309bebe220a2c20f1600682547f6
 
 build:
   entry_points:
     - care_predict = csbdeep.scripts.care_predict:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
