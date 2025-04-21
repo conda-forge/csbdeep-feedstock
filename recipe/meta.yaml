@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/csbdeep-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/csbdeep-{{ version }}.tar.gz
   sha256: 43a9e3108a9bf9cd3cd12e87292ce84b2476309bebe220a2c20f1600682547f6
 
 build:
   entry_points:
     - care_predict = csbdeep.scripts.care_predict:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
