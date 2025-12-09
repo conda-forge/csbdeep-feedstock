@@ -10,6 +10,7 @@ source:
   sha256: de0188d39d5eaeafe02d34c50fc1cd67d922b920628726fbdccdf3ff478f5e86
 
 build:
+  skip: true  # [py==313]
   entry_points:
     - care_predict = csbdeep.scripts.care_predict:main
   script: {{ PYTHON }} -m pip install . -vv
