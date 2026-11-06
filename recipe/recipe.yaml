@@ -1,0 +1,63 @@
+schema_version: 1
+
+context:
+  version: "0.8.2"
+
+package:
+  name: csbdeep
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/c/csbdeep/csbdeep-${{ version }}.tar.gz
+  sha256: de0188d39d5eaeafe02d34c50fc1cd67d922b920628726fbdccdf3ff478f5e86
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - care_predict = csbdeep.scripts.care_predict:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy
+    - scipy
+    - matplotlib-base
+    - six
+    - tifffile
+    - tqdm
+    - packaging
+
+tests:
+  - python:
+      imports:
+        - csbdeep
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - care_predict --help
+
+about:
+  summary: CSBDeep - a toolbox for Content-aware Image Restoration (CARE)
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
+  homepage: https://github.com/CSBDeep/CSBDeep
+  documentation: http://csbdeep.bioimagecomputing.com/doc/
+
+extra:
+  recipe-maintainers:
+    - goanpeca
+    - uschmidt83
+    - imagejan
